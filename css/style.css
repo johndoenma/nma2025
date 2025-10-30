@@ -55,6 +55,7 @@ TABLE OF CONTENTS
 
     /* DEFINE BASE COLORS */
     --color-white: #fff;
+    --color-white-80: rgb(255 255 255 / .8);
     --color-black: #000;
     --color-black-80: rgb(0 0 0 / .8);
 
@@ -73,6 +74,10 @@ TABLE OF CONTENTS
     --color-green-800: #166534;
     --color-green-900: #004419;
 
+    /* KCC BRAND COLORS */
+    --color-kcc-dark-blue: #29337E;
+    --color-kcc-light-blue: #7FBDEF ;
+
     /* DEFINE SEMANTIC COLORS */
     --color-body-background: var(--color-white);
     --color-body-text: var(--color-black-80);
@@ -89,10 +94,10 @@ TABLE OF CONTENTS
 
     /* SECTION SPECIFIC */
     --color-siteheader-background: transparent;
-    --color-siteheader-links: var(--color-blue-800);
-    --color-siteheader-links-hover: var(--color-blue-900);
+    --color-siteheader-links: var(--color-white-80);
+    --color-siteheader-links-hover: var(--color-white);
     --color-sitefooter-background: var(--color-grey-100);
-    --color-hero-background: var(--color-blue-100);
+    --color-hero-background: var(--color-kcc-dark-blue);
 
     /* BORDERS */
     --color-border: var(--color-grey-200);
@@ -111,8 +116,8 @@ TABLE OF CONTENTS
     --container-width: 1100px;
 
     /* GLOBAL FONTS */
-    --font-body: system-ui, Helvetica, arial, sans-serif;
-    --font-headings: Georgia, Times, "Times New Roman", serif;
+    --font-body: proxima-nova, system-ui, Helvetica, arial, sans-serif;
+    --font-headings: proxima-nova-wide, system-ui, Helvetica, arial, sans-serif;
 
 }
 
@@ -372,7 +377,7 @@ html {
 .site-nav a:hover {
     color: var(--color-siteheader-links-hover);
     text-decoration: underline;
-    text-decoration-color: var(--color-links);
+    text-decoration-color: var(--color-kcc-light-blue);
     text-underline-offset: .5em;
     text-decoration-thickness: .1em;
 }
@@ -495,10 +500,19 @@ section {
     padding-block: var(--unit-2xl);
 }
 
+/* HERO SECTION STYLING */
 .hero {
     background-color: var(--color-hero-background);
     padding-block: var(--unit-3xl);
     padding-inline: var(--unit-s);
+    color: var(--color-white)
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4 {
+    color: var(--color-white);
 }
 
 .hero:has(.container) {
